@@ -4,8 +4,10 @@
 class PointOfInterest:
     """Contains all of the information of an Eleuthia Point of Interest
 
-    Has the difficulties: 'unknown', 'normal', 'epic', 'deadly',
-        and 'forbidden'
+    Valid difficulties are: 'unknown', 'normal', 'epic', 'deadly',
+                            and 'forbidden'
+
+    Public attributes: name, difficulty, and solved
     """
 
     difficulties = {'unknown', 'normal', 'epic', 'deadly', 'forbidden'}
