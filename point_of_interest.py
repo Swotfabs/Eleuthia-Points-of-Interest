@@ -8,7 +8,7 @@ class PointOfInterest:
         and 'forbidden'
     """
 
-    self.difficulties = {'unknown', 'normal', 'epic', 'deadly', 'forbidden'}
+    difficulties = {'unknown', 'normal', 'epic', 'deadly', 'forbidden'}
 
     def __init__(self, name, difficulty="unknown", solved=False):
         """Constructs a Point of Interest.

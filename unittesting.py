@@ -1,3 +1,6 @@
-## Unit Testing
+"""Runs all of the Unit Tests"""
+import unittest
+from UnitTests.points_of_interest_unittests import PointOfIntersetTests
 
-assert False, "Not Yet Implemented"
+if __name__ == '__main__':
+    unittest.main()

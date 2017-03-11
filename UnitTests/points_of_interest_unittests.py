@@ -1,9 +1,10 @@
 """Runs unit tests on Points of Interests
 
-This should be run from the main folder (or via unittesting.py)
+This should be run by running unittesting.py in the main foldor
+or the imports will fail.
 """
 import unittest
-from point_of_interest import PointOfInterest, InvalidPointException
+from point_of_interest import PointOfInterest
 
 
 class PointOfIntersetTests(unittest.TestCase):
@@ -52,6 +53,3 @@ class PointOfIntersetTests(unittest.TestCase):
     def test_changeDifficulty_invalid(self):
         with self.assertRaises(TypeError):
             self.point.changeDifficulty('INVALID')
-
-if __name__ == '__main__':
-    unittest.main()
