@@ -19,22 +19,34 @@ class PointOfInterest:
         Trying to create a Point of Interest with an invalid difficulty
         raises a TypeError.
         """
-        assert False, "Not Yet Implemented"
+        if difficulty not in self.difficulties:
+            raise TypeError("{0} is not a valid difficulty".format
+                            (difficulty))
+        self.name = name
+        self.difficulty = difficulty
+        self.solved = solved
 
     def markSolved(self):
         """Marks a Point of Interest as solved.
 
         Marking a solved point as solved raises AttributeError."""
-        assert False, "Not Yet Implemented"
+        if self.solved:
+            raise AttributeError("Point of Interest is already solved")
+        self.solved = True
 
     def markUnsolved(self):
         """Marks a Point of Interest as unsolved.
 
         Marking an unsolved point as unsolved raises AttributeError."""
-        assert False, "Not Yet Implemented"
+        if not self.solved:
+            raise AttributeError("Point of Interest is already solved")
+        self.solved = False
 
     def changeDifficulty(self, difficulty):
         """Changes the difficulty of the Point of Interest.
 
         Changing the difficulty to an invalid difficulty raises a TypeError."""
-        assert False, "Not Yet Implemented"
+        if difficulty not in self.difficulties:
+            raise TypeError("{0} is not a valid difficulty".format
+                            (difficulty))
+        self.difficulty = difficulty

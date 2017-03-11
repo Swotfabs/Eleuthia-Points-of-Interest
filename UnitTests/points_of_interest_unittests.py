@@ -14,7 +14,7 @@ class PointOfIntersetTests(unittest.TestCase):
         self.point = PointOfInterest("Test")
 
     def test_default(self):
-        self.assertEqual(self.point.name, "default")
+        self.assertEqual(self.point.name, "Test")
         self.assertEqual(self.point.difficulty, 'unknown')
         self.assertFalse(self.point.solved)
 
