@@ -59,8 +59,8 @@ class PlayerTests(unittest.TestCase):
         self.player.addPointOfInterest(self.point)
         self.player.markSolved(self.point.name)
         pointTwo = self.player.getPointOfInterest(self.point.name)
-        self.assertFalse(self.point.solved)
-        self.assertTrue(pointTwo.solved)
+        self.assertTrue(self.point.solved)
+        self.assertFalse(pointTwo.solved)
 
     def test_markeSolvedWithObject(self):
         if self.point.solved:
@@ -68,7 +68,41 @@ class PlayerTests(unittest.TestCase):
         self.player.addPointOfInterest(self.point)
         self.player.markSolved(self.point)
         pointTwo = self.player.getPointOfInterest(self.point)
+        self.assertTrue(self.point.solved)
+        self.assertFalse(pointTwo.solved)
+
+    def test_markUnsolved(self):
+        if not self.point.solved:
+            self.point.markSolved()
+        self.player.addPointOfInterest(self.point)
+        self.player.markUnsolved(self.point.name)
+        pointTwo = self.player.getPointOfInterest(self.point.name)
         self.assertFalse(self.point.solved)
         self.assertTrue(pointTwo.solved)
 
-    def test_markUnsolved
+    def test_markeUnsolvedWithObject(self):
+        if not self.point.solved:
+            self.point.markSolved()
+        self.player.addPointOfInterest(self.point)
+        self.player.markUnsolved(self.point)
+        pointTwo = self.player.getPointOfInterest(self.point)
+        self.assertFalse(self.point.solved)
+        self.assertTrue(pointTwo.solved)
+
+    def test_changeDifficulty(self):
+        # Todo
+
+    def test_changeDifficultyWithObject(self):
+        # Todo
+
+    def test_solvedPoints(self):
+        # Todo
+
+    def test_solvedPointsOrder(self):
+        # Todo
+
+    def test_unsolvedPoints(self):
+        # Todo
+
+    def test_unsolvedPointsOrder(self):
+        # Todo
