@@ -57,3 +57,9 @@ class PointOfIntersetTests(unittest.TestCase):
     def test_changeDifficulty_invalid(self):
         with self.assertRaises(TypeError):
             self.point.changeDifficulty('INVALID')
+
+    def test_compare(self):
+        self.point.changeName("A")
+        pointTwo = PointOfInterest("B")
+        self.assertTrue(PointOfInterest.compareKey(self.point) <
+                        PointOfInterest.compareKey(pointTwo))

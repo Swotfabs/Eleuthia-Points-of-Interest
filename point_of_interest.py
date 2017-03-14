@@ -56,3 +56,7 @@ class PointOfInterest:
             raise TypeError("{0} is not a valid difficulty".format
                             (difficulty))
         self.difficulty = difficulty
+
+    @staticmethod
+    def compareKey(point):
+        return point.name.lower()
