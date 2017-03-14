@@ -28,6 +28,10 @@ class PointOfInterest:
         self.difficulty = difficulty
         self.solved = solved
 
+    def changeName(self, name):
+        """Changes the name of a Point of Interest"""
+        self.name = name
+
     def markSolved(self):
         """Marks a Point of Interest as solved.
 

@@ -42,7 +42,7 @@ class Player:
 
         assert False, "Not Yet Implemented"
 
-    def changeDifficulty(self, point):
+    def changeDifficulty(self, point, difficulty):
         """Changes the difficulty of a Point of Interest."""
 
         assert False, "Not Yet Implemented"

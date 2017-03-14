@@ -28,6 +28,10 @@ class PointOfIntersetTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             pointTwo = PointOfInterest("TestTwo", 'INVALID', True)
 
+    def test_changeName(self):
+        self.point.changeName("Test Two")
+        self.assertEqual(self.point.name, "Test Two")
+
     def test_solve(self):
         self.point.markSolved()
         self.assertTrue(self.point.solved)
