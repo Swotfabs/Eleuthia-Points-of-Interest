@@ -20,8 +20,10 @@ if __name__ == '__main__':
     if not args.pointTests and not args.playerTests:
         unittest.main()
     if args.pointTests:
-        suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(PointOfIntersetTests))
+        suite.addTest(unittest.defaultTestLoader.
+                      loadTestsFromTestCase(PointOfIntersetTests))
     if args.playerTests:
-        suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(PlayerTests))
+        suite.addTest(unittest.defaultTestLoader.
+                      loadTestsFromTestCase(PlayerTests))
 
     unittest.TextTestRunner().run(suite)
