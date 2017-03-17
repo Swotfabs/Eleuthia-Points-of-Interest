@@ -1,4 +1,6 @@
 """Holds the Player class which has points of interest"""
+from sortedcontainers import SortedSet
+from point_of_interest import PointOfInterest
 
 
 class Player:
@@ -7,9 +9,13 @@ class Player:
     Public attributes: name
     """
 
+    existingPoints = set()
+    solvedPointsSet = SortedSet(key=PointOfInterest.compareKey)
+    unsolvedPointsSet = SortedSet(key=PointOfInterest.compareKey)
+
     def __init__(self, name):
         """Creates a Player"""
-        assert False, "Not Yet Implemented"
+        self.name = name
 
     def addPointOfInterest(self, point):
         """Adds a copy of a Point of Interest to the player.
